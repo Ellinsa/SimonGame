@@ -28,13 +28,12 @@ $(".btn").click(function() {
 
 // game logic
 
-// Create a new function called checkAnswer(), it should take one input with the name currentLevel
 function checkAnswer(currentLevel) {
-  // to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
+  // to check if the most recent user answer is the same as the game pattern.
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
     console.log("success");
 
-    // If the user got the most recent answer right in step above, then check that they have finished their sequence with another if statement.
+    // then check that they have finished their sequence with another if statement.
     if (userClickedPattern.length === gamePattern.length) {
       // Call nextSequence() after a 1000 millisecond delay.
       setTimeout(function() {
