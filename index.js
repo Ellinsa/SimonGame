@@ -8,7 +8,7 @@ let level = 0;
 
 // start the game
 $(document).one("keypress", function(event) {
-  if (event.key === "a" && !started) {
+  if (event.key === "a" || event.key === "ф" || event.key === "а") {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
